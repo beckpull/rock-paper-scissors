@@ -7,19 +7,19 @@ var results = []
 
 var userInput = prompt("Choose R, P, or S");
 // computer chooses R P or S at random
-var botInput = Math.floor(Math.random()*choices.length-1);
+var botInput = Math.floor(Math.random()*choices.length);
 var botChoice = choices[botInput];
 var userChoice = userInput.toUpperCase();
 // computer evaluates who won
 if (userChoice === botChoice) {
-    alert("You have tied!");
+    alert("Bot choice: " + botChoice + " You have tied!");
 } else if (userChoice === "R" && botChoice === "S" || userChoice === "P" && botChoice === "R" || userChoice === "S" && botChoice === "P") {
-    alert("You win!")
+    alert("Bot choice: " + botChoice + " You win!");
     results.push("W");
 } else {
-    alert("You lose!")
+    alert("Bot choice: " + botChoice + " You lose!");
 }
-return 
+
 
 
 // computer shows wins, losses and asks if user wants to play again
